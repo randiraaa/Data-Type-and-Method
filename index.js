@@ -19,3 +19,23 @@ console.log(rand(6));
 console.log(rand());
 
 console.log('----------------------------')
+
+// 02-choose-your-decimal
+// Buatlah sebuah function yang menerima 2 input berupa:
+// n yang menerima tipe data number. n adalah nilai desimal yang akan ditentukan batas desimalnya.
+// d yang menerima tipe data number. d adalah besaran nilai berapa banyak angka dibelakang desimal dari n.
+
+function chooseDecimals(n, d) {
+  if (typeof n === 'number') {
+    n = n.toFixed(d);
+  } else if (typeof n === 'string') {
+    n = parseFloat(n).toFixed(d);
+  }
+  return n;
+}
+
+console.log(chooseDecimals(2.100212, 2));
+console.log(chooseDecimals(2.100212, 3));
+console.log(chooseDecimals(2100, 2));
+
+console.log('----------------------------')
