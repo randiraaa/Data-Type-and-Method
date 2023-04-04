@@ -39,3 +39,25 @@ console.log(chooseDecimals(2.100212, 3));
 console.log(chooseDecimals(2100, 2));
 
 console.log('----------------------------')
+
+// 03-is-it-numeric
+// Buatlah sebuah function yang menerima 1 input untuk mengecek apakah inputan tersebut sebuah numerik atau bukan. Jika iya maka akan mengembalikan status TRUE dan jika bukan maka akan mengembalikan status FALSE.
+
+function isItNumeric(input) {
+  if (typeof input === 'number') {
+    return true;
+  } else if (typeof input === 'string') {
+    return !isNaN(input) && !isNaN(parseFloat(input));
+  } else {
+    return false;
+  }
+}
+
+console.log(isItNumeric(12));
+console.log(isItNumeric('abcd'));
+console.log(isItNumeric('12'));
+console.log(isItNumeric(' '));
+console.log(isItNumeric(1.20));
+console.log(isItNumeric(-200));
+
+console.log('----------------------------')
