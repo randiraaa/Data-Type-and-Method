@@ -61,3 +61,15 @@ console.log(isItNumeric(1.20));
 console.log(isItNumeric(-200));
 
 console.log('----------------------------')
+
+// 04-make-integer-round-up.md
+// Make Integer Round Up
+// Buatlah sebuah function yang menerima 1 input dengan tipe data integer yang akan dibulatkan ke atas dalam kelipatan 5.
+
+function roundUpToFive(num) {
+  return Math.ceil(num/5) * 5;
+}
+
+console.log(roundUpToFive(32));
+console.log(roundUpToFive(137));
+console.log(roundUpToFive(142));
